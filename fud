@@ -1,5 +1,5 @@
 #!/bin/sh
 ARG=$1
-[ -z "$ARG" ] && echo "No argument to fetch from urban dictionary"
+[ -z "$ARG" ] && echo "No argument to fetch from urban dictionary." && echo "Example: $ fud fud"
 curl -L -s "http://www.urbandictionary.com/define.php?term=$ARG" | grep '<meta content' | grep "name='Description'" | cut -f2 -d"'" 
 

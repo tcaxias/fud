@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ARG=$1
+ARG=`echo $1|sed 's/ /%20/g'`
 
 [ -z "$ARG" ] && echo "No argument to fetch from urban dictionary." && echo "Example: $ fud fud"
 

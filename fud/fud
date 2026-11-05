@@ -1,0 +1,3 @@
+#!/bin/sh
+# Thin entry point; all logic lives in fud.py (Python stdlib only).
+exec python3 "$(dirname "$0")/fud.py" "$@"
